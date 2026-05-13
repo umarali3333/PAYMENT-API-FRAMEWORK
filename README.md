@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ISO 20022 Cross-Border Payment API Test Framework
 
 ## What This Is
@@ -165,3 +166,7 @@ When user sends GET request to "/posts"
 When user sends GET request to "/payments"
 When user sends GET request to "/payments/PAY-12345/status"
 ```
+=======
+# PAYMENT-API-FRAMEWORK
+Rest assure testing using bdd
+>>>>>>> 5e0610cba11e7f754a0205f7f28b129c2c8e68b2
