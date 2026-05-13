@@ -17,7 +17,7 @@ Feature: GET API Tests
   Scenario: Get all posts
     Given user sets API base URL
     When user sends GET request to "/posts"
-    Then validate status code is 200
+    Then validate status code is 400
     And validate response contains "title"
 
   # ────────────────────────────────────────────────────────────
