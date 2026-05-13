@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <!-- Console output with color -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%-5level] [%logger{36}] - %msg%n"/>
+        </Console>
+
+        <!-- File output for test execution logs -->
+        <File name="TestLog" fileName="target/logs/test-execution.log" append="false">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%logger{36}] - %msg%n"/>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <!-- REST Assured HTTP logs -->
+        <Logger name="io.restassured" level="WARN" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Logger>
+
+        <!-- Our framework logs -->
+        <Logger name="steps" level="INFO" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="TestLog"/>
+        </Logger>
+        <Logger name="utils" level="INFO" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="TestLog"/>
+        </Logger>
+        <Logger name="config" level="INFO" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="TestLog"/>
+        </Logger>
+        <Logger name="models" level="DEBUG" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="TestLog"/>
+        </Logger>
+
+        <Root level="INFO">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="TestLog"/>
+        </Root>
+    </Loggers>
+</Configuration>

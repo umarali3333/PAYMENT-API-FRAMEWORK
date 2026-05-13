@@ -1,0 +1,12 @@
+C:\sotwares\payment-api-framework\src\test\java\config\ConfigManager.java
+C:\sotwares\payment-api-framework\src\test\java\models\PaymentRequestBuilder.java
+C:\sotwares\payment-api-framework\src\test\java\steps\CommonStepDefinitions.java
+C:\sotwares\payment-api-framework\src\test\java\steps\GetPaymentStepDefinitions.java
+C:\sotwares\payment-api-framework\src\test\java\steps\Hooks.java
+C:\sotwares\payment-api-framework\src\test\java\steps\PostPaymentStepDefinitions.java
+C:\sotwares\payment-api-framework\src\test\java\steps\PutDeleteStepDefinitions.java
+C:\sotwares\payment-api-framework\src\test\java\TestRunner.java
+C:\sotwares\payment-api-framework\src\test\java\utils\AuthManager.java
+C:\sotwares\payment-api-framework\src\test\java\utils\BaseAPI.java
+C:\sotwares\payment-api-framework\src\test\java\utils\TestContext.java
+C:\sotwares\payment-api-framework\src\test\java\utils\ValidationHelper.java
