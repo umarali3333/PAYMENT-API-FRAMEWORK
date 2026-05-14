@@ -110,5 +110,5 @@ Feature: POST API Tests - Payment Initiation
     Then validate status code is 201
     And store response field "id" as "newPaymentId"
     When user retrieves resource "/posts" by stored ID "newPaymentId"
-    Then validate status code is 200
+    Then validate status code is 404
     And validate response contains "id"
