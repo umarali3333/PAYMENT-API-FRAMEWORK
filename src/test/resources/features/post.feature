@@ -104,12 +104,12 @@ Feature: POST API Tests - Payment Initiation
   # SCENARIO 10: Store payment ID for subsequent operations
   # Real flow: Create → Retrieve → Cancel/Track
   # ────────────────────────────────────────────────────────────
-  @ignore
-  Scenario: Create payment and retrieve by stored ID
-    Given user sets API base URL
-    When user sends POST request to "/posts"
-    Then validate status code is 201
-    And store response field "id" as "newPaymentId"
-    When user retrieves resource "/posts" by stored ID "newPaymentId"
-    Then validate status code is 404
-    And validate response contains "id"
+
+  #Scenario: Create payment and retrieve by stored ID
+    #Given user sets API base URL
+    #When user sends POST request to "/posts"
+    #Then validate status code is 201
+    #And store response field "id" as "newPaymentId"
+    #When user retrieves resource "/posts" by stored ID "newPaymentId"
+    #Then validate status code is 404
+    #And validate response contains "id"

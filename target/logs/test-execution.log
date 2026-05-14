@@ -1,550 +1,535 @@
-2026-05-12 13:57:02.223 [INFO ] [steps.Hooks] - ========================================
-2026-05-12 13:57:02.227 [INFO ] [steps.Hooks] -   ISO 20022 Payment API Test Suite
-2026-05-12 13:57:02.227 [INFO ] [steps.Hooks] -   Starting test execution...
-2026-05-12 13:57:02.227 [INFO ] [steps.Hooks] - ========================================
-2026-05-12 13:57:02.238 [INFO ] [config.ConfigManager] - Loaded config for environment: dev
-2026-05-12 13:57:02.917 [INFO ] [utils.BaseAPI] - BaseAPI initialized. Base URL: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:03.239 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:03.243 [INFO ] [steps.Hooks] - SCENARIO STARTED: Authenticated request succeeds
-2026-05-12 13:57:03.245 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:03.245 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:03.253 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:03.253 [INFO ] [steps.CommonStepDefinitions] - Authentication: Using Bearer token from config
-2026-05-12 13:57:03.262 [INFO ] [steps.GetPaymentStepDefinitions] - Sending authenticated GET request to: /posts/1
-2026-05-12 13:57:07.309 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
-2026-05-12 13:57:08.188 [INFO ] [utils.ValidationHelper] - Asserting field exists: id = 1
-2026-05-12 13:57:08.191 [INFO ] [steps.Hooks] - SCENARIO PASSED: Authenticated request succeeds
-2026-05-12 13:57:08.226 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:08.226 [INFO ] [steps.Hooks] - SCENARIO STARTED: Unauthenticated GET request
-2026-05-12 13:57:08.226 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:08.227 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:08.227 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:08.228 [INFO ] [steps.CommonStepDefinitions] - Authentication: None (testing unauthorized access)
-2026-05-12 13:57:08.229 [INFO ] [steps.GetPaymentStepDefinitions] - Sending UNAUTHENTICATED GET request to: /posts (expect 401/403)
-2026-05-12 13:57:08.737 [INFO ] [utils.ValidationHelper] - Asserting success status (2xx): actual=200
-2026-05-12 13:57:08.739 [INFO ] [steps.Hooks] - SCENARIO PASSED: Unauthenticated GET request
-2026-05-12 13:57:08.751 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:08.751 [INFO ] [steps.Hooks] - SCENARIO STARTED: Unauthenticated POST request
-2026-05-12 13:57:08.752 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:08.752 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:08.753 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:08.754 [INFO ] [steps.CommonStepDefinitions] - Authentication: None (testing unauthorized access)
-2026-05-12 13:57:08.755 [INFO ] [steps.PostPaymentStepDefinitions] - Sending unauthenticated POST to: /posts (expect 401)
-2026-05-12 13:57:09.623 [INFO ] [utils.ValidationHelper] - Asserting success status (2xx): actual=201
-2026-05-12 13:57:09.623 [INFO ] [steps.Hooks] - SCENARIO PASSED: Unauthenticated POST request
-2026-05-12 13:57:09.636 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:09.636 [INFO ] [steps.Hooks] - SCENARIO STARTED: API Key authenticated request succeeds
-2026-05-12 13:57:09.637 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:09.637 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:09.638 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:09.639 [INFO ] [steps.CommonStepDefinitions] - Authentication: Using API Key from config
-2026-05-12 13:57:09.640 [INFO ] [steps.GetPaymentStepDefinitions] - Sending authenticated GET request to: /posts
-2026-05-12 13:57:09.918 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
-2026-05-12 13:57:09.981 [INFO ] [steps.GetPaymentStepDefinitions] - Response list contains 100 items
-2026-05-12 13:57:09.984 [INFO ] [steps.Hooks] - SCENARIO PASSED: API Key authenticated request succeeds
-2026-05-12 13:57:10.000 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:10.001 [INFO ] [steps.Hooks] - SCENARIO STARTED: Cancel pending payment successfully
-2026-05-12 13:57:10.001 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:10.002 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:10.003 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:10.004 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:10.005 [INFO ] [steps.PutDeleteStepDefinitions] - Sending DELETE request to: /posts/1
-2026-05-12 13:57:10.551 [INFO ] [steps.PutDeleteStepDefinitions] - DELETE response: HTTP 200
-2026-05-12 13:57:10.553 [INFO ] [steps.PutDeleteStepDefinitions] - Payment cancellation validated: HTTP 200
-2026-05-12 13:57:10.553 [INFO ] [steps.Hooks] - SCENARIO PASSED: Cancel pending payment successfully
-2026-05-12 13:57:10.563 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:10.564 [INFO ] [steps.Hooks] - SCENARIO STARTED: Delete post and validate status
-2026-05-12 13:57:10.564 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:10.564 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:10.565 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:10.566 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:10.567 [INFO ] [steps.PutDeleteStepDefinitions] - Cancelling payment ID: 1
-2026-05-12 13:57:10.567 [INFO ] [steps.PutDeleteStepDefinitions] - Sending DELETE request to: /posts/1
-2026-05-12 13:57:11.621 [INFO ] [steps.PutDeleteStepDefinitions] - DELETE response: HTTP 200
-2026-05-12 13:57:11.622 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
-2026-05-12 13:57:11.623 [INFO ] [steps.Hooks] - SCENARIO PASSED: Delete post and validate status
-2026-05-12 13:57:11.635 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:11.635 [INFO ] [steps.Hooks] - SCENARIO STARTED: Cancel payment within time SLA
-2026-05-12 13:57:11.635 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:11.635 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:11.636 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:11.636 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:11.637 [INFO ] [steps.PutDeleteStepDefinitions] - Sending DELETE request to: /posts/2
-2026-05-12 13:57:12.120 [INFO ] [steps.PutDeleteStepDefinitions] - DELETE response: HTTP 200
-2026-05-12 13:57:12.121 [INFO ] [steps.PutDeleteStepDefinitions] - Payment cancellation validated: HTTP 200
-2026-05-12 13:57:12.122 [INFO ] [utils.ValidationHelper] - Response time: 469ms (max allowed: 5000ms)
-2026-05-12 13:57:12.128 [INFO ] [steps.Hooks] - SCENARIO PASSED: Cancel payment within time SLA
-2026-05-12 13:57:12.143 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:12.144 [INFO ] [steps.Hooks] - SCENARIO STARTED: Attempt to cancel payment with invalid ID
-2026-05-12 13:57:12.145 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:12.145 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:12.146 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:12.147 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:12.148 [INFO ] [steps.PutDeleteStepDefinitions] - Attempting to delete non-existent payment: 99999
-2026-05-12 13:57:12.149 [INFO ] [steps.PutDeleteStepDefinitions] - Sending DELETE request to: /posts/99999
-2026-05-12 13:57:12.619 [INFO ] [steps.PutDeleteStepDefinitions] - DELETE response: HTTP 200
-2026-05-12 13:57:12.620 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=404, actual=200
-2026-05-12 13:57:12.629 [ERROR] [steps.Hooks] - SCENARIO FAILED: Attempt to cancel payment with invalid ID
-2026-05-12 13:57:12.654 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:12.655 [INFO ] [steps.Hooks] - SCENARIO STARTED: Get all posts
-2026-05-12 13:57:12.656 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:12.657 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:12.657 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:12.658 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:12.659 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts
-2026-05-12 13:57:13.023 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 339ms
-2026-05-12 13:57:13.024 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
-2026-05-12 13:57:13.069 [INFO ] [utils.ValidationHelper] - Asserting field exists: title = [sunt aut facere repellat provident occaecati excepturi optio reprehenderit, qui est esse, ea molestias quasi exercitationem repellat qui ipsa sit aut, eum et est occaecati, nesciunt quas odio, dolorem eum magni eos aperiam quia, magnam facilis autem, dolorem dolore est ipsam, nesciunt iure omnis dolorem tempora et accusantium, optio molestias id quia eum, et ea vero quia laudantium autem, in quibusdam tempore odit est dolorem, dolorum ut in voluptas mollitia et saepe quo animi, voluptatem eligendi optio, eveniet quod temporibus, sint suscipit perspiciatis velit dolorum rerum ipsa laboriosam odio, fugit voluptas sed molestias voluptatem provident, voluptate et itaque vero tempora molestiae, adipisci placeat illum aut reiciendis qui, doloribus ad provident suscipit at, asperiores ea ipsam voluptatibus modi minima quia sint, dolor sint quo a velit explicabo quia nam, maxime id vitae nihil numquam, autem hic labore sunt dolores incidunt, rem alias distinctio quo quis, est et quae odit qui non, quasi id et eos tenetur aut quo autem, delectus ullam et corporis nulla voluptas sequi, iusto eius quod necessitatibus culpa ea, a quo magni similique perferendis, ullam ut quidem id aut vel consequuntur, doloremque illum aliquid sunt, qui explicabo molestiae dolorem, magnam ut rerum iure, id nihil consequatur molestias animi provident, fuga nam accusamus voluptas reiciendis itaque, provident vel ut sit ratione est, explicabo et eos deleniti nostrum ab id repellendus, eos dolorem iste accusantium est eaque quam, enim quo cumque, non est facere, commodi ullam sint et excepturi error explicabo praesentium voluptas, eligendi iste nostrum consequuntur adipisci praesentium sit beatae perferendis, optio dolor molestias sit, ut numquam possimus omnis eius suscipit laudantium iure, aut quo modi neque nostrum ducimus, quibusdam cumque rem aut deserunt, ut voluptatem illum ea doloribus itaque eos, laborum non sunt aut ut assumenda perspiciatis voluptas, repellendus qui recusandae incidunt voluptates tenetur qui omnis exercitationem, soluta aliquam aperiam consequatur illo quis voluptas, qui enim et consequuntur quia animi quis voluptate quibusdam, ut quo aut ducimus alias, sit asperiores ipsam eveniet odio non quia, sit vel voluptatem et non libero, qui et at rerum necessitatibus, sed ab est est, voluptatum itaque dolores nisi et quasi, qui commodi dolor at maiores et quis id accusantium, consequatur placeat omnis quisquam quia reprehenderit fugit veritatis facere, voluptatem doloribus consectetur est ut ducimus, beatae enim quia vel, voluptas blanditiis repellendus animi ducimus error sapiente et suscipit, et fugit quas eum in in aperiam quod, consequatur id enim sunt et et, repudiandae ea animi iusto, aliquid eos sed fuga est maxime repellendus, odio quis facere architecto reiciendis optio, fugiat quod pariatur odit minima, voluptatem laborum magni, et iusto veniam et illum aut fuga, sint hic doloribus consequatur eos non id, consequuntur deleniti eos quia temporibus ab aliquid at, enim unde ratione doloribus quas enim ut sit sapiente, dignissimos eum dolor ut enim et delectus in, doloremque officiis ad et non perferendis, necessitatibus quasi exercitationem odio, quam voluptatibus rerum veritatis, pariatur consequatur quia magnam autem omnis non amet, labore in ex et explicabo corporis aut quas, tempora rem veritatis voluptas quo dolores vero, laudantium voluptate suscipit sunt enim enim, odit et voluptates doloribus alias odio et, optio ipsam molestias necessitatibus occaecati facilis veritatis dolores aut, dolore veritatis porro provident adipisci blanditiis et sunt, placeat quia et porro iste, nostrum quis quasi placeat, sapiente omnis fugit eos, sint soluta et vel magnam aut ut sed qui, ad iusto omnis odit dolor voluptatibus, aut amet sed, ratione ex tenetur perferendis, beatae soluta recusandae, qui qui voluptates illo iste minima, id minus libero illum nam ad officiis, quaerat velit veniam amet cupiditate aut numquam ut sequi, quas fugiat ut perspiciatis vero provident, laboriosam dolor voluptates, temporibus sit alias delectus eligendi possimus magni, at nam consequatur ea labore ea harum]
-2026-05-12 13:57:13.071 [INFO ] [steps.Hooks] - SCENARIO PASSED: Get all posts
-2026-05-12 13:57:13.081 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:13.081 [INFO ] [steps.Hooks] - SCENARIO STARTED: Get post id 1
-2026-05-12 13:57:13.081 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:13.081 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:13.082 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:13.083 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:13.084 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts/1
-2026-05-12 13:57:13.431 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 335ms
-2026-05-12 13:57:13.432 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
-2026-05-12 13:57:13.448 [INFO ] [utils.ValidationHelper] - Asserting field exists: userId = 1
-2026-05-12 13:57:13.449 [INFO ] [steps.Hooks] - SCENARIO PASSED: Get post id 1
-2026-05-12 13:57:13.454 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:13.455 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate response header
-2026-05-12 13:57:13.455 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:13.455 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:13.455 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:13.456 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:13.456 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts
-2026-05-12 13:57:13.732 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 256ms
-2026-05-12 13:57:13.733 [INFO ] [utils.ValidationHelper] - Header present: Content-Type = application/json; charset=utf-8
-2026-05-12 13:57:13.734 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate response header
-2026-05-12 13:57:13.742 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:13.742 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate response time
-2026-05-12 13:57:13.742 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:13.742 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:13.743 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:13.744 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:13.744 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts
-2026-05-12 13:57:14.053 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 290ms
-2026-05-12 13:57:14.054 [INFO ] [utils.ValidationHelper] - Response time: 290ms (max allowed: 5000ms)
-2026-05-12 13:57:14.055 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate response time
-2026-05-12 13:57:14.062 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:14.063 [INFO ] [steps.Hooks] - SCENARIO STARTED: Invalid post id
-2026-05-12 13:57:14.063 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:14.063 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:14.064 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:14.064 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:14.065 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts/0002
-2026-05-12 13:57:15.337 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 404, Time: 1240ms
-2026-05-12 13:57:15.338 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=404, actual=404
-2026-05-12 13:57:15.338 [INFO ] [steps.Hooks] - SCENARIO PASSED: Invalid post id
-2026-05-12 13:57:15.345 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:15.346 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate Content-Type header is JSON
-2026-05-12 13:57:15.346 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:15.346 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:15.347 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:15.349 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:15.350 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts/1
-2026-05-12 13:57:15.785 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 416ms
-2026-05-12 13:57:15.786 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
-2026-05-12 13:57:15.787 [INFO ] [utils.ValidationHelper] - Asserting Content-Type: application/json; charset=utf-8
-2026-05-12 13:57:15.788 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate Content-Type header is JSON
-2026-05-12 13:57:15.795 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:15.796 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate list response is not empty
-2026-05-12 13:57:15.796 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:15.796 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:15.797 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:15.798 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:15.799 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts
-2026-05-12 13:57:16.072 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 258ms
-2026-05-12 13:57:16.073 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
-2026-05-12 13:57:16.087 [INFO ] [steps.GetPaymentStepDefinitions] - Response list contains 100 items
-2026-05-12 13:57:16.087 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate list response is not empty
-2026-05-12 13:57:16.094 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:16.094 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate required fields in payment record
-2026-05-12 13:57:16.096 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:16.096 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:16.096 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:16.096 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:16.097 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts/1
-2026-05-12 13:57:16.547 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 439ms
-2026-05-12 13:57:16.548 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
-2026-05-12 13:57:16.560 [INFO ] [utils.ValidationHelper] - Asserting field exists: id = 1
-2026-05-12 13:57:16.573 [INFO ] [utils.ValidationHelper] - Asserting field exists: title = sunt aut facere repellat provident occaecati excepturi optio reprehenderit
-2026-05-12 13:57:16.586 [INFO ] [utils.ValidationHelper] - Asserting field exists: body = quia et suscipit
+2026-05-14 12:38:16.009 [INFO ] [steps.Hooks] - ========================================
+2026-05-14 12:38:16.016 [INFO ] [steps.Hooks] -   ISO 20022 Payment API Test Suite
+2026-05-14 12:38:16.016 [INFO ] [steps.Hooks] -   Starting test execution...
+2026-05-14 12:38:16.016 [INFO ] [steps.Hooks] - ========================================
+2026-05-14 12:38:16.051 [INFO ] [config.ConfigManager] - Loaded config for environment: dev
+2026-05-14 12:38:16.965 [INFO ] [utils.BaseAPI] - BaseAPI initialized. Base URL: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:17.492 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:17.493 [INFO ] [steps.Hooks] - SCENARIO STARTED: Authenticated request succeeds
+2026-05-14 12:38:17.493 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:38:17.494 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:17.502 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:17.505 [INFO ] [steps.CommonStepDefinitions] - Authentication: Using Bearer token from config
+2026-05-14 12:38:17.508 [INFO ] [steps.GetPaymentStepDefinitions] - Sending authenticated GET request to: /posts/1
+2026-05-14 12:38:21.892 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
+2026-05-14 12:38:22.997 [INFO ] [utils.ValidationHelper] - Asserting field exists: id = 1
+2026-05-14 12:38:23.002 [INFO ] [steps.Hooks] - SCENARIO PASSED: Authenticated request succeeds
+2026-05-14 12:38:23.046 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:23.047 [INFO ] [steps.Hooks] - SCENARIO STARTED: Unauthenticated GET request
+2026-05-14 12:38:23.047 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:38:23.048 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:23.050 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:23.050 [INFO ] [steps.CommonStepDefinitions] - Authentication: None (testing unauthorized access)
+2026-05-14 12:38:23.051 [INFO ] [steps.GetPaymentStepDefinitions] - Sending UNAUTHENTICATED GET request to: /posts (expect 401/403)
+2026-05-14 12:38:25.798 [INFO ] [utils.ValidationHelper] - Asserting success status (2xx): actual=200
+2026-05-14 12:38:25.801 [INFO ] [steps.Hooks] - SCENARIO PASSED: Unauthenticated GET request
+2026-05-14 12:38:25.818 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:25.818 [INFO ] [steps.Hooks] - SCENARIO STARTED: Unauthenticated POST request
+2026-05-14 12:38:25.819 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:38:25.819 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:25.820 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:25.821 [INFO ] [steps.CommonStepDefinitions] - Authentication: None (testing unauthorized access)
+2026-05-14 12:38:25.822 [INFO ] [steps.PostPaymentStepDefinitions] - Sending unauthenticated POST to: /posts (expect 401)
+2026-05-14 12:38:30.278 [INFO ] [utils.ValidationHelper] - Asserting success status (2xx): actual=201
+2026-05-14 12:38:30.279 [INFO ] [steps.Hooks] - SCENARIO PASSED: Unauthenticated POST request
+2026-05-14 12:38:30.293 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:30.294 [INFO ] [steps.Hooks] - SCENARIO STARTED: API Key authenticated request succeeds
+2026-05-14 12:38:30.294 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:38:30.295 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:30.296 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:30.297 [INFO ] [steps.CommonStepDefinitions] - Authentication: Using API Key from config
+2026-05-14 12:38:30.299 [INFO ] [steps.GetPaymentStepDefinitions] - Sending authenticated GET request to: /posts
+2026-05-14 12:38:30.663 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
+2026-05-14 12:38:30.738 [INFO ] [steps.GetPaymentStepDefinitions] - Response list contains 100 items
+2026-05-14 12:38:30.739 [INFO ] [steps.Hooks] - SCENARIO PASSED: API Key authenticated request succeeds
+2026-05-14 12:38:30.780 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:30.781 [INFO ] [steps.Hooks] - SCENARIO STARTED: Cancel pending payment successfully
+2026-05-14 12:38:30.781 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:38:30.781 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:30.782 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:30.783 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:30.784 [INFO ] [steps.PutDeleteStepDefinitions] - Sending DELETE request to: /posts/1
+2026-05-14 12:38:32.780 [INFO ] [steps.PutDeleteStepDefinitions] - DELETE response: HTTP 200
+2026-05-14 12:38:32.783 [INFO ] [steps.PutDeleteStepDefinitions] - Payment cancellation validated: HTTP 200
+2026-05-14 12:38:32.784 [INFO ] [steps.Hooks] - SCENARIO PASSED: Cancel pending payment successfully
+2026-05-14 12:38:32.796 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:32.796 [INFO ] [steps.Hooks] - SCENARIO STARTED: Delete post and validate status
+2026-05-14 12:38:32.796 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:38:32.797 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:32.797 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:32.798 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:32.799 [INFO ] [steps.PutDeleteStepDefinitions] - Cancelling payment ID: 1
+2026-05-14 12:38:32.799 [INFO ] [steps.PutDeleteStepDefinitions] - Sending DELETE request to: /posts/1
+2026-05-14 12:38:34.379 [INFO ] [steps.PutDeleteStepDefinitions] - DELETE response: HTTP 200
+2026-05-14 12:38:34.381 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
+2026-05-14 12:38:34.382 [INFO ] [steps.Hooks] - SCENARIO PASSED: Delete post and validate status
+2026-05-14 12:38:34.402 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:34.402 [INFO ] [steps.Hooks] - SCENARIO STARTED: Cancel payment within time SLA
+2026-05-14 12:38:34.404 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:38:34.404 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:34.404 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:34.404 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:34.406 [INFO ] [steps.PutDeleteStepDefinitions] - Sending DELETE request to: /posts/2
+2026-05-14 12:38:35.034 [INFO ] [steps.PutDeleteStepDefinitions] - DELETE response: HTTP 200
+2026-05-14 12:38:35.036 [INFO ] [steps.PutDeleteStepDefinitions] - Payment cancellation validated: HTTP 200
+2026-05-14 12:38:35.038 [INFO ] [utils.ValidationHelper] - Response time: 603ms (max allowed: 5000ms)
+2026-05-14 12:38:35.042 [INFO ] [steps.Hooks] - SCENARIO PASSED: Cancel payment within time SLA
+2026-05-14 12:38:35.059 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:35.059 [INFO ] [steps.Hooks] - SCENARIO STARTED: Attempt to cancel payment with invalid ID
+2026-05-14 12:38:35.059 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:38:35.059 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:35.062 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:35.062 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:35.064 [INFO ] [steps.PutDeleteStepDefinitions] - Attempting to delete non-existent payment: 99999
+2026-05-14 12:38:35.064 [INFO ] [steps.PutDeleteStepDefinitions] - Sending DELETE request to: /posts/99999
+2026-05-14 12:38:36.713 [INFO ] [steps.PutDeleteStepDefinitions] - DELETE response: HTTP 200
+2026-05-14 12:38:36.713 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
+2026-05-14 12:38:36.713 [INFO ] [steps.Hooks] - SCENARIO PASSED: Attempt to cancel payment with invalid ID
+2026-05-14 12:38:36.739 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:36.739 [INFO ] [steps.Hooks] - SCENARIO STARTED: Get all posts
+2026-05-14 12:38:36.745 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:38:36.745 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:36.745 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:36.745 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:36.745 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts
+2026-05-14 12:38:37.591 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 803ms
+2026-05-14 12:38:37.591 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
+2026-05-14 12:38:37.640 [INFO ] [utils.ValidationHelper] - Asserting field exists: title = [sunt aut facere repellat provident occaecati excepturi optio reprehenderit, qui est esse, ea molestias quasi exercitationem repellat qui ipsa sit aut, eum et est occaecati, nesciunt quas odio, dolorem eum magni eos aperiam quia, magnam facilis autem, dolorem dolore est ipsam, nesciunt iure omnis dolorem tempora et accusantium, optio molestias id quia eum, et ea vero quia laudantium autem, in quibusdam tempore odit est dolorem, dolorum ut in voluptas mollitia et saepe quo animi, voluptatem eligendi optio, eveniet quod temporibus, sint suscipit perspiciatis velit dolorum rerum ipsa laboriosam odio, fugit voluptas sed molestias voluptatem provident, voluptate et itaque vero tempora molestiae, adipisci placeat illum aut reiciendis qui, doloribus ad provident suscipit at, asperiores ea ipsam voluptatibus modi minima quia sint, dolor sint quo a velit explicabo quia nam, maxime id vitae nihil numquam, autem hic labore sunt dolores incidunt, rem alias distinctio quo quis, est et quae odit qui non, quasi id et eos tenetur aut quo autem, delectus ullam et corporis nulla voluptas sequi, iusto eius quod necessitatibus culpa ea, a quo magni similique perferendis, ullam ut quidem id aut vel consequuntur, doloremque illum aliquid sunt, qui explicabo molestiae dolorem, magnam ut rerum iure, id nihil consequatur molestias animi provident, fuga nam accusamus voluptas reiciendis itaque, provident vel ut sit ratione est, explicabo et eos deleniti nostrum ab id repellendus, eos dolorem iste accusantium est eaque quam, enim quo cumque, non est facere, commodi ullam sint et excepturi error explicabo praesentium voluptas, eligendi iste nostrum consequuntur adipisci praesentium sit beatae perferendis, optio dolor molestias sit, ut numquam possimus omnis eius suscipit laudantium iure, aut quo modi neque nostrum ducimus, quibusdam cumque rem aut deserunt, ut voluptatem illum ea doloribus itaque eos, laborum non sunt aut ut assumenda perspiciatis voluptas, repellendus qui recusandae incidunt voluptates tenetur qui omnis exercitationem, soluta aliquam aperiam consequatur illo quis voluptas, qui enim et consequuntur quia animi quis voluptate quibusdam, ut quo aut ducimus alias, sit asperiores ipsam eveniet odio non quia, sit vel voluptatem et non libero, qui et at rerum necessitatibus, sed ab est est, voluptatum itaque dolores nisi et quasi, qui commodi dolor at maiores et quis id accusantium, consequatur placeat omnis quisquam quia reprehenderit fugit veritatis facere, voluptatem doloribus consectetur est ut ducimus, beatae enim quia vel, voluptas blanditiis repellendus animi ducimus error sapiente et suscipit, et fugit quas eum in in aperiam quod, consequatur id enim sunt et et, repudiandae ea animi iusto, aliquid eos sed fuga est maxime repellendus, odio quis facere architecto reiciendis optio, fugiat quod pariatur odit minima, voluptatem laborum magni, et iusto veniam et illum aut fuga, sint hic doloribus consequatur eos non id, consequuntur deleniti eos quia temporibus ab aliquid at, enim unde ratione doloribus quas enim ut sit sapiente, dignissimos eum dolor ut enim et delectus in, doloremque officiis ad et non perferendis, necessitatibus quasi exercitationem odio, quam voluptatibus rerum veritatis, pariatur consequatur quia magnam autem omnis non amet, labore in ex et explicabo corporis aut quas, tempora rem veritatis voluptas quo dolores vero, laudantium voluptate suscipit sunt enim enim, odit et voluptates doloribus alias odio et, optio ipsam molestias necessitatibus occaecati facilis veritatis dolores aut, dolore veritatis porro provident adipisci blanditiis et sunt, placeat quia et porro iste, nostrum quis quasi placeat, sapiente omnis fugit eos, sint soluta et vel magnam aut ut sed qui, ad iusto omnis odit dolor voluptatibus, aut amet sed, ratione ex tenetur perferendis, beatae soluta recusandae, qui qui voluptates illo iste minima, id minus libero illum nam ad officiis, quaerat velit veniam amet cupiditate aut numquam ut sequi, quas fugiat ut perspiciatis vero provident, laboriosam dolor voluptates, temporibus sit alias delectus eligendi possimus magni, at nam consequatur ea labore ea harum]
+2026-05-14 12:38:37.640 [INFO ] [steps.Hooks] - SCENARIO PASSED: Get all posts
+2026-05-14 12:38:37.654 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:37.654 [INFO ] [steps.Hooks] - SCENARIO STARTED: Get post id 1
+2026-05-14 12:38:37.654 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:38:37.656 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:37.656 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:37.656 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:37.662 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts/1
+2026-05-14 12:38:38.432 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 745ms
+2026-05-14 12:38:38.432 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
+2026-05-14 12:38:38.446 [INFO ] [utils.ValidationHelper] - Asserting field exists: userId = 1
+2026-05-14 12:38:38.462 [INFO ] [steps.Hooks] - SCENARIO PASSED: Get post id 1
+2026-05-14 12:38:38.468 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:38.474 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate response header
+2026-05-14 12:38:38.474 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:38:38.474 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:38.474 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:38.479 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:38.479 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts
+2026-05-14 12:38:38.853 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 340ms
+2026-05-14 12:38:38.853 [INFO ] [utils.ValidationHelper] - Header present: Content-Type = application/json; charset=utf-8
+2026-05-14 12:38:38.853 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate response header
+2026-05-14 12:38:38.869 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:38.869 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate response time
+2026-05-14 12:38:38.869 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:38:38.869 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:38.869 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:38.869 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:38.869 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts
+2026-05-14 12:38:39.268 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 361ms
+2026-05-14 12:38:39.268 [INFO ] [utils.ValidationHelper] - Response time: 361ms (max allowed: 5000ms)
+2026-05-14 12:38:39.268 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate response time
+2026-05-14 12:38:39.278 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:39.278 [INFO ] [steps.Hooks] - SCENARIO STARTED: Invalid post id
+2026-05-14 12:38:39.278 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:38:39.280 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:39.280 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:39.280 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:39.282 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts/0002
+2026-05-14 12:38:40.488 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 404, Time: 1190ms
+2026-05-14 12:38:40.488 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=404, actual=404
+2026-05-14 12:38:40.490 [INFO ] [steps.Hooks] - SCENARIO PASSED: Invalid post id
+2026-05-14 12:38:40.493 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:40.495 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate Content-Type header is JSON
+2026-05-14 12:38:40.495 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:38:40.495 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:40.495 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:40.495 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:40.495 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts/1
+2026-05-14 12:38:43.782 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 3281ms
+2026-05-14 12:38:43.782 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
+2026-05-14 12:38:43.782 [INFO ] [utils.ValidationHelper] - Asserting Content-Type: application/json; charset=utf-8
+2026-05-14 12:38:43.782 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate Content-Type header is JSON
+2026-05-14 12:38:43.808 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:43.808 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate list response is not empty
+2026-05-14 12:38:43.808 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:38:43.808 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:43.808 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:43.808 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:43.808 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts
+2026-05-14 12:38:44.111 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 303ms
+2026-05-14 12:38:44.111 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
+2026-05-14 12:38:44.127 [INFO ] [steps.GetPaymentStepDefinitions] - Response list contains 100 items
+2026-05-14 12:38:44.127 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate list response is not empty
+2026-05-14 12:38:44.127 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:44.127 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate required fields in payment record
+2026-05-14 12:38:44.127 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:38:44.127 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:44.127 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:44.127 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:44.127 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts/1
+2026-05-14 12:38:45.148 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 992ms
+2026-05-14 12:38:45.149 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
+2026-05-14 12:38:45.163 [INFO ] [utils.ValidationHelper] - Asserting field exists: id = 1
+2026-05-14 12:38:45.186 [INFO ] [utils.ValidationHelper] - Asserting field exists: title = sunt aut facere repellat provident occaecati excepturi optio reprehenderit
+2026-05-14 12:38:45.211 [INFO ] [utils.ValidationHelper] - Asserting field exists: body = quia et suscipit
 suscipit recusandae consequuntur expedita et cum
 reprehenderit molestiae ut ut quas totam
 nostrum rerum est autem sunt rem eveniet architecto
-2026-05-12 13:57:16.600 [INFO ] [utils.ValidationHelper] - Asserting field exists: userId = 1
-2026-05-12 13:57:16.601 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate required fields in payment record
-2026-05-12 13:57:16.607 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:16.607 [INFO ] [steps.Hooks] - SCENARIO STARTED: Get payments filtered by user ID
-2026-05-12 13:57:16.607 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:16.607 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:16.608 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:16.608 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:16.610 [INFO ] [steps.GetPaymentStepDefinitions] - GET /posts with ?userId=1
-2026-05-12 13:57:16.882 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
-2026-05-12 13:57:16.885 [INFO ] [steps.GetPaymentStepDefinitions] - Response list contains 10 items
-2026-05-12 13:57:16.885 [INFO ] [steps.Hooks] - SCENARIO PASSED: Get payments filtered by user ID
-2026-05-12 13:57:16.891 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:16.891 [INFO ] [steps.Hooks] - SCENARIO STARTED: Get sub-resource for payment (comments/status updates)
-2026-05-12 13:57:16.891 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:16.892 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:16.892 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:16.892 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:16.893 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts/1/comments
-2026-05-12 13:57:17.185 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 283ms
-2026-05-12 13:57:17.185 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
-2026-05-12 13:57:17.187 [INFO ] [steps.GetPaymentStepDefinitions] - Response list contains 5 items
-2026-05-12 13:57:17.187 [INFO ] [steps.Hooks] - SCENARIO PASSED: Get sub-resource for payment (comments/status updates)
-2026-05-12 13:57:17.194 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:17.194 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate payment ID matches requested ID
-2026-05-12 13:57:17.194 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:17.194 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:17.194 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:17.194 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:17.194 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts/5
-2026-05-12 13:57:17.433 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 239ms
-2026-05-12 13:57:17.435 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
-2026-05-12 13:57:17.458 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate payment ID matches requested ID
-2026-05-12 13:57:17.466 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:17.466 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate response body is not empty
-2026-05-12 13:57:17.466 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:17.466 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:17.466 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:17.466 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:17.467 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts/1
-2026-05-12 13:57:17.762 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 295ms
-2026-05-12 13:57:17.762 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
-2026-05-12 13:57:17.762 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate response body is not empty
-2026-05-12 13:57:17.771 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:17.771 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate response meets strict SLA
-2026-05-12 13:57:17.771 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:17.771 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:17.771 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:17.773 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:17.773 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts/1
-2026-05-12 13:57:18.047 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 264ms
-2026-05-12 13:57:18.049 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
-2026-05-12 13:57:18.049 [INFO ] [utils.ValidationHelper] - Response time: 264ms (max allowed: 3000ms)
-2026-05-12 13:57:18.049 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate response meets strict SLA
-2026-05-12 13:57:18.056 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:18.056 [INFO ] [steps.Hooks] - SCENARIO STARTED: Get posts and users resources
-2026-05-12 13:57:18.056 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:18.056 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:18.058 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:18.058 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:18.060 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts
-2026-05-12 13:57:18.359 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 281ms
-2026-05-12 13:57:18.359 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
-2026-05-12 13:57:18.359 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /users
-2026-05-12 13:57:18.685 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 315ms
-2026-05-12 13:57:18.685 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
-2026-05-12 13:57:18.685 [INFO ] [steps.Hooks] - SCENARIO PASSED: Get posts and users resources
-2026-05-12 13:57:18.691 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:18.691 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate each item in list has required payment fields
-2026-05-12 13:57:18.691 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:18.691 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:18.693 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:18.693 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:18.693 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts
-2026-05-12 13:57:18.913 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 211ms
-2026-05-12 13:57:18.913 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
-2026-05-12 13:57:21.020 [INFO ] [steps.GetPaymentStepDefinitions] - All 100 items have field 'id'
-2026-05-12 13:57:22.616 [INFO ] [steps.GetPaymentStepDefinitions] - All 100 items have field 'title'
-2026-05-12 13:57:23.986 [INFO ] [steps.GetPaymentStepDefinitions] - All 100 items have field 'userId'
-2026-05-12 13:57:23.987 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate each item in list has required payment fields
-2026-05-12 13:57:24.009 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:24.009 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate German IBAN format in payment
-2026-05-12 13:57:24.009 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:24.009 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:24.010 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:24.010 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:24.014 [INFO ] [steps.PostPaymentStepDefinitions] - Initiating cross-border payment: 500.00 EUR from DE89370400440532013000 to FR7614508059144900028066622
-2026-05-12 13:57:24.014 [DEBUG] [models.PaymentRequestBuilder] - Built pacs.008 Credit Transfer payload: amount=500.00 EUR
-2026-05-12 13:57:24.913 [INFO ] [steps.PostPaymentStepDefinitions] - Payment creation validated: HTTP 201
-2026-05-12 13:57:24.914 [INFO ] [utils.ValidationHelper] - IBAN validation passed: DE89370400440532013000
-2026-05-12 13:57:24.915 [INFO ] [utils.ValidationHelper] - IBAN validation passed: FR7614508059144900028066622
-2026-05-12 13:57:24.915 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate German IBAN format in payment
-2026-05-12 13:57:24.921 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:24.921 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate payment amount is correct format
-2026-05-12 13:57:24.921 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:24.921 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:24.921 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:24.922 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:24.923 [INFO ] [steps.PostPaymentStepDefinitions] - Initiating cross-border payment: 250.50 USD from US12345678901234567890 to GB29NWBK60161331926819
-2026-05-12 13:57:24.924 [DEBUG] [models.PaymentRequestBuilder] - Built pacs.008 Credit Transfer payload: amount=250.50 USD
-2026-05-12 13:57:25.361 [INFO ] [steps.PostPaymentStepDefinitions] - Payment creation validated: HTTP 201
-2026-05-12 13:57:25.362 [INFO ] [utils.ValidationHelper] - Amount validation passed: 250.50
-2026-05-12 13:57:25.364 [INFO ] [utils.ValidationHelper] - Currency code validation passed: USD
-2026-05-12 13:57:25.364 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate payment amount is correct format
-2026-05-12 13:57:25.369 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:25.369 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate EUR cross-border payment
-2026-05-12 13:57:25.369 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:25.369 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:25.370 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:25.370 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:25.370 [INFO ] [steps.PostPaymentStepDefinitions] - Initiating cross-border payment: 1000.00 EUR from DE89370400440532013000 to NL91ABNA0417164300
-2026-05-12 13:57:25.371 [DEBUG] [models.PaymentRequestBuilder] - Built pacs.008 Credit Transfer payload: amount=1000.00 EUR
-2026-05-12 13:57:25.870 [INFO ] [steps.PostPaymentStepDefinitions] - Payment creation validated: HTTP 201
-2026-05-12 13:57:25.870 [INFO ] [utils.ValidationHelper] - Currency code validation passed: EUR
-2026-05-12 13:57:25.870 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate EUR cross-border payment
-2026-05-12 13:57:25.870 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:25.870 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate GBP payment to UK account
-2026-05-12 13:57:25.870 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:25.870 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:25.870 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:25.870 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:25.870 [INFO ] [steps.PostPaymentStepDefinitions] - Initiating cross-border payment: 750.00 GBP from GB29NWBK60161331926819 to GB82WEST12345698765432
-2026-05-12 13:57:25.870 [DEBUG] [models.PaymentRequestBuilder] - Built pacs.008 Credit Transfer payload: amount=750.00 GBP
-2026-05-12 13:57:26.303 [INFO ] [steps.PostPaymentStepDefinitions] - Payment creation validated: HTTP 201
-2026-05-12 13:57:26.303 [INFO ] [utils.ValidationHelper] - Currency code validation passed: GBP
-2026-05-12 13:57:26.303 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate GBP payment to UK account
-2026-05-12 13:57:26.308 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:26.308 [INFO ] [steps.Hooks] - SCENARIO STARTED: Payment response does not expose sensitive banking data
-2026-05-12 13:57:26.308 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:26.308 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:26.310 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:26.310 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:26.310 [INFO ] [steps.PostPaymentStepDefinitions] - Initiating cross-border payment: 100.00 EUR from DE89370400440532013000 to GB29NWBK60161331926819
-2026-05-12 13:57:26.310 [DEBUG] [models.PaymentRequestBuilder] - Built pacs.008 Credit Transfer payload: amount=100.00 EUR
-2026-05-12 13:57:27.221 [INFO ] [steps.PostPaymentStepDefinitions] - Payment creation validated: HTTP 201
-2026-05-12 13:57:27.223 [INFO ] [utils.ValidationHelper] - Sensitive data exposure check passed
-2026-05-12 13:57:27.224 [INFO ] [steps.Hooks] - SCENARIO PASSED: Payment response does not expose sensitive banking data
-2026-05-12 13:57:27.231 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:27.233 [INFO ] [steps.Hooks] - SCENARIO STARTED: High value payment submission
-2026-05-12 13:57:27.233 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:27.233 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:27.234 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:27.235 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:27.235 [INFO ] [steps.PostPaymentStepDefinitions] - Initiating cross-border payment: 50000.00 EUR from DE89370400440532013000 to GB29NWBK60161331926819
-2026-05-12 13:57:27.236 [DEBUG] [models.PaymentRequestBuilder] - Built pacs.008 Credit Transfer payload: amount=50000.00 EUR
-2026-05-12 13:57:27.745 [INFO ] [steps.PostPaymentStepDefinitions] - Payment creation validated: HTTP 201
-2026-05-12 13:57:27.746 [INFO ] [utils.ValidationHelper] - Response time: 499ms (max allowed: 5000ms)
-2026-05-12 13:57:27.746 [INFO ] [steps.Hooks] - SCENARIO PASSED: High value payment submission
-2026-05-12 13:57:27.751 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:27.752 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate multiple currency codes
-2026-05-12 13:57:27.752 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:27.752 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:27.752 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:27.752 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:27.753 [INFO ] [steps.PostPaymentStepDefinitions] - Initiating cross-border payment: 100.00 EUR from DE89370400440532013000 to GB29NWBK60161331926819
-2026-05-12 13:57:27.753 [DEBUG] [models.PaymentRequestBuilder] - Built pacs.008 Credit Transfer payload: amount=100.00 EUR
-2026-05-12 13:57:28.218 [INFO ] [steps.PostPaymentStepDefinitions] - Payment creation validated: HTTP 201
-2026-05-12 13:57:28.219 [INFO ] [utils.ValidationHelper] - Currency code validation passed: EUR
-2026-05-12 13:57:28.219 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate multiple currency codes
-2026-05-12 13:57:28.224 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:28.224 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate multiple currency codes
-2026-05-12 13:57:28.224 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:28.224 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:28.224 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:28.225 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:28.225 [INFO ] [steps.PostPaymentStepDefinitions] - Initiating cross-border payment: 100.00 USD from DE89370400440532013000 to GB29NWBK60161331926819
-2026-05-12 13:57:28.225 [DEBUG] [models.PaymentRequestBuilder] - Built pacs.008 Credit Transfer payload: amount=100.00 USD
-2026-05-12 13:57:28.835 [INFO ] [steps.PostPaymentStepDefinitions] - Payment creation validated: HTTP 201
-2026-05-12 13:57:28.836 [INFO ] [utils.ValidationHelper] - Currency code validation passed: USD
-2026-05-12 13:57:28.836 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate multiple currency codes
-2026-05-12 13:57:28.841 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:28.841 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate multiple currency codes
-2026-05-12 13:57:28.841 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:28.841 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:28.842 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:28.842 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:28.843 [INFO ] [steps.PostPaymentStepDefinitions] - Initiating cross-border payment: 100.00 GBP from DE89370400440532013000 to GB29NWBK60161331926819
-2026-05-12 13:57:28.843 [DEBUG] [models.PaymentRequestBuilder] - Built pacs.008 Credit Transfer payload: amount=100.00 GBP
-2026-05-12 13:57:29.345 [INFO ] [steps.PostPaymentStepDefinitions] - Payment creation validated: HTTP 201
-2026-05-12 13:57:29.347 [INFO ] [utils.ValidationHelper] - Currency code validation passed: GBP
-2026-05-12 13:57:29.348 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate multiple currency codes
-2026-05-12 13:57:29.354 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:29.355 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate multiple currency codes
-2026-05-12 13:57:29.355 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:29.355 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:29.355 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:29.356 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:29.356 [INFO ] [steps.PostPaymentStepDefinitions] - Initiating cross-border payment: 100.00 CHF from DE89370400440532013000 to GB29NWBK60161331926819
-2026-05-12 13:57:29.356 [DEBUG] [models.PaymentRequestBuilder] - Built pacs.008 Credit Transfer payload: amount=100.00 CHF
-2026-05-12 13:57:29.936 [INFO ] [steps.PostPaymentStepDefinitions] - Payment creation validated: HTTP 201
-2026-05-12 13:57:29.936 [INFO ] [utils.ValidationHelper] - Currency code validation passed: CHF
-2026-05-12 13:57:29.937 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate multiple currency codes
-2026-05-12 13:57:29.941 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:29.941 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate multiple currency codes
-2026-05-12 13:57:29.941 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:29.942 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:29.942 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:29.942 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:29.943 [INFO ] [steps.PostPaymentStepDefinitions] - Initiating cross-border payment: 100.00 JPY from DE89370400440532013000 to GB29NWBK60161331926819
-2026-05-12 13:57:29.943 [DEBUG] [models.PaymentRequestBuilder] - Built pacs.008 Credit Transfer payload: amount=100.00 JPY
-2026-05-12 13:57:30.663 [INFO ] [steps.PostPaymentStepDefinitions] - Payment creation validated: HTTP 201
-2026-05-12 13:57:30.664 [INFO ] [utils.ValidationHelper] - Currency code validation passed: JPY
-2026-05-12 13:57:30.664 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate multiple currency codes
-2026-05-12 13:57:30.678 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:30.678 [INFO ] [steps.Hooks] - SCENARIO STARTED: Create new post successfully
-2026-05-12 13:57:30.679 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:30.679 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:30.680 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:30.681 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:30.683 [INFO ] [steps.PostPaymentStepDefinitions] - Sending POST to: /posts
-2026-05-12 13:57:31.207 [INFO ] [steps.PostPaymentStepDefinitions] - POST response: HTTP 201
-2026-05-12 13:57:31.208 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=201, actual=201
-2026-05-12 13:57:31.220 [INFO ] [utils.ValidationHelper] - Asserting field exists: id = 101
-2026-05-12 13:57:31.230 [INFO ] [steps.PostPaymentStepDefinitions] - Payment ID received: 101
-2026-05-12 13:57:31.231 [INFO ] [steps.Hooks] - SCENARIO PASSED: Create new post successfully
-2026-05-12 13:57:31.236 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:31.237 [INFO ] [steps.Hooks] - SCENARIO STARTED: Initiate cross-border credit transfer EUR to GBP
-2026-05-12 13:57:31.237 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:31.237 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:31.237 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:31.238 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:31.239 [INFO ] [steps.PostPaymentStepDefinitions] - Initiating cross-border payment: 1500.00 EUR from DE89370400440532013000 to GB29NWBK60161331926819
-2026-05-12 13:57:31.239 [DEBUG] [models.PaymentRequestBuilder] - Built pacs.008 Credit Transfer payload: amount=1500.00 EUR
-2026-05-12 13:57:31.725 [INFO ] [steps.PostPaymentStepDefinitions] - Payment creation validated: HTTP 201
-2026-05-12 13:57:31.735 [INFO ] [utils.ValidationHelper] - Asserting field exists: id = 101
-2026-05-12 13:57:31.743 [INFO ] [steps.PostPaymentStepDefinitions] - Payment ID received: 101
-2026-05-12 13:57:31.745 [INFO ] [utils.ValidationHelper] - IBAN validation passed: DE89370400440532013000
-2026-05-12 13:57:31.745 [INFO ] [utils.ValidationHelper] - IBAN validation passed: GB29NWBK60161331926819
-2026-05-12 13:57:31.746 [INFO ] [utils.ValidationHelper] - Amount validation passed: 1500.00
-2026-05-12 13:57:31.747 [INFO ] [utils.ValidationHelper] - Currency code validation passed: EUR
-2026-05-12 13:57:31.748 [INFO ] [steps.Hooks] - SCENARIO PASSED: Initiate cross-border credit transfer EUR to GBP
-2026-05-12 13:57:31.754 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:31.755 [INFO ] [steps.Hooks] - SCENARIO STARTED: Payment initiation meets response time SLA
-2026-05-12 13:57:31.755 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:31.755 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:31.755 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:31.756 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:31.756 [INFO ] [steps.PostPaymentStepDefinitions] - Sending POST to: /posts
-2026-05-12 13:57:32.228 [INFO ] [steps.PostPaymentStepDefinitions] - POST response: HTTP 201
-2026-05-12 13:57:32.232 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=201, actual=201
-2026-05-12 13:57:32.232 [INFO ] [utils.ValidationHelper] - Response time: 468ms (max allowed: 5000ms)
-2026-05-12 13:57:32.233 [INFO ] [steps.Hooks] - SCENARIO PASSED: Payment initiation meets response time SLA
-2026-05-12 13:57:32.238 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:32.238 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate POST response Content-Type
-2026-05-12 13:57:32.238 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:32.239 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:32.239 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:32.240 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:32.240 [INFO ] [steps.PostPaymentStepDefinitions] - Sending POST to: /posts
-2026-05-12 13:57:32.658 [INFO ] [steps.PostPaymentStepDefinitions] - POST response: HTTP 201
-2026-05-12 13:57:32.659 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=201, actual=201
-2026-05-12 13:57:32.660 [INFO ] [utils.ValidationHelper] - Asserting Content-Type: application/json; charset=utf-8
-2026-05-12 13:57:32.660 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate POST response Content-Type
-2026-05-12 13:57:32.665 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:32.665 [INFO ] [steps.Hooks] - SCENARIO STARTED: Created payment record has required fields
-2026-05-12 13:57:32.666 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:32.666 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:32.667 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:32.667 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:32.668 [INFO ] [steps.PostPaymentStepDefinitions] - Sending POST to: /posts
-2026-05-12 13:57:33.125 [INFO ] [steps.PostPaymentStepDefinitions] - POST response: HTTP 201
-2026-05-12 13:57:33.125 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=201, actual=201
-2026-05-12 13:57:33.135 [INFO ] [utils.ValidationHelper] - Asserting field exists: id = 101
-2026-05-12 13:57:33.143 [INFO ] [utils.ValidationHelper] - Asserting field exists: title = Payment EUR 1000.00
-2026-05-12 13:57:33.144 [INFO ] [steps.Hooks] - SCENARIO PASSED: Created payment record has required fields
-2026-05-12 13:57:33.148 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:33.148 [INFO ] [steps.Hooks] - SCENARIO STARTED: Payment missing required amount field
-2026-05-12 13:57:33.149 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:33.149 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:33.149 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:33.150 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:33.151 [INFO ] [steps.PostPaymentStepDefinitions] - Testing missing amount validation...
-2026-05-12 13:57:33.570 [INFO ] [utils.ValidationHelper] - Asserting success status (2xx): actual=201
-2026-05-12 13:57:33.571 [INFO ] [steps.Hooks] - SCENARIO PASSED: Payment missing required amount field
-2026-05-12 13:57:33.574 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:33.575 [INFO ] [steps.Hooks] - SCENARIO STARTED: Payment with negative amount should be rejected
-2026-05-12 13:57:33.575 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:33.575 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:33.575 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:33.575 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:33.576 [INFO ] [steps.PostPaymentStepDefinitions] - Testing negative amount validation: -100.00
-2026-05-12 13:57:34.031 [INFO ] [utils.ValidationHelper] - Asserting success status (2xx): actual=201
-2026-05-12 13:57:34.032 [INFO ] [steps.Hooks] - SCENARIO PASSED: Payment with negative amount should be rejected
-2026-05-12 13:57:34.036 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:34.036 [INFO ] [steps.Hooks] - SCENARIO STARTED: POST response body is not empty
-2026-05-12 13:57:34.036 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:34.037 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:34.037 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:34.037 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:34.038 [INFO ] [steps.PostPaymentStepDefinitions] - Sending POST to: /posts
-2026-05-12 13:57:35.006 [INFO ] [steps.PostPaymentStepDefinitions] - POST response: HTTP 201
-2026-05-12 13:57:35.007 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=201, actual=201
-2026-05-12 13:57:35.008 [INFO ] [steps.Hooks] - SCENARIO PASSED: POST response body is not empty
-2026-05-12 13:57:35.013 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:35.013 [INFO ] [steps.Hooks] - SCENARIO STARTED: Payment response does not expose sensitive data
-2026-05-12 13:57:35.013 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:35.013 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:35.014 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:35.015 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:35.016 [INFO ] [steps.PostPaymentStepDefinitions] - Sending POST to: /posts
-2026-05-12 13:57:35.505 [INFO ] [steps.PostPaymentStepDefinitions] - POST response: HTTP 201
-2026-05-12 13:57:35.506 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=201, actual=201
-2026-05-12 13:57:35.506 [INFO ] [utils.ValidationHelper] - Sensitive data exposure check passed
-2026-05-12 13:57:35.506 [INFO ] [steps.Hooks] - SCENARIO PASSED: Payment response does not expose sensitive data
-2026-05-12 13:57:35.511 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:35.511 [INFO ] [steps.Hooks] - SCENARIO STARTED: Create payment and retrieve by stored ID
-2026-05-12 13:57:35.511 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:35.511 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:35.511 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:35.512 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:35.513 [INFO ] [steps.PostPaymentStepDefinitions] - Sending POST to: /posts
-2026-05-12 13:57:36.003 [INFO ] [steps.PostPaymentStepDefinitions] - POST response: HTTP 201
-2026-05-12 13:57:36.004 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=201, actual=201
-2026-05-12 13:57:36.012 [INFO ] [steps.CommonStepDefinitions] - Stored newPaymentId = 101 in context
-2026-05-12 13:57:36.013 [INFO ] [steps.GetPaymentStepDefinitions] - Retrieving: /posts/101
-2026-05-12 13:57:36.013 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts/101
-2026-05-12 13:57:36.281 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 404, Time: 263ms
-2026-05-12 13:57:36.282 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=404
-2026-05-12 13:57:36.283 [ERROR] [steps.Hooks] - SCENARIO FAILED: Create payment and retrieve by stored ID
-2026-05-12 13:57:36.291 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:36.291 [INFO ] [steps.Hooks] - SCENARIO STARTED: Update entire payment record
-2026-05-12 13:57:36.291 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:36.291 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:36.291 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:36.292 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:36.292 [INFO ] [steps.PutDeleteStepDefinitions] - Sending PUT request to: /posts/1
-2026-05-12 13:57:37.313 [INFO ] [steps.PutDeleteStepDefinitions] - PUT response: HTTP 200
-2026-05-12 13:57:37.314 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
-2026-05-12 13:57:37.314 [INFO ] [steps.PutDeleteStepDefinitions] - Payment update validated: HTTP 200
-2026-05-12 13:57:37.315 [INFO ] [steps.Hooks] - SCENARIO PASSED: Update entire payment record
-2026-05-12 13:57:37.318 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:37.318 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate PUT response headers
-2026-05-12 13:57:37.318 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:37.319 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:37.319 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:37.319 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:37.319 [INFO ] [steps.PutDeleteStepDefinitions] - Sending PUT request to: /posts/1
-2026-05-12 13:57:38.467 [INFO ] [steps.PutDeleteStepDefinitions] - PUT response: HTTP 200
-2026-05-12 13:57:38.468 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
-2026-05-12 13:57:38.469 [INFO ] [utils.ValidationHelper] - Asserting Content-Type: application/json; charset=utf-8
-2026-05-12 13:57:38.469 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate PUT response headers
-2026-05-12 13:57:38.473 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:38.473 [INFO ] [steps.Hooks] - SCENARIO STARTED: Partial update of payment reference
-2026-05-12 13:57:38.473 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:38.473 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:38.473 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:38.473 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:38.474 [INFO ] [steps.PutDeleteStepDefinitions] - Sending PATCH to: /posts/1 with title=Corrected Payment Reference
-2026-05-12 13:57:40.068 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
-2026-05-12 13:57:40.087 [INFO ] [steps.Hooks] - SCENARIO PASSED: Partial update of payment reference
-2026-05-12 13:57:40.092 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:40.092 [INFO ] [steps.Hooks] - SCENARIO STARTED: Update payment amount
-2026-05-12 13:57:40.092 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:40.092 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:40.093 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:40.093 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:40.094 [INFO ] [steps.PutDeleteStepDefinitions] - Updating payment 1 with new amount 2500.00 USD
-2026-05-12 13:57:41.680 [INFO ] [steps.PutDeleteStepDefinitions] - Payment update validated: HTTP 200
-2026-05-12 13:57:41.680 [INFO ] [utils.ValidationHelper] - Response time: 1579ms (max allowed: 5000ms)
-2026-05-12 13:57:41.680 [INFO ] [steps.Hooks] - SCENARIO PASSED: Update payment amount
-2026-05-12 13:57:41.685 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:41.685 [INFO ] [steps.Hooks] - SCENARIO STARTED: PUT response body is not empty
-2026-05-12 13:57:41.685 [INFO ] [steps.Hooks] - Tags: []
-2026-05-12 13:57:41.685 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
-2026-05-12 13:57:41.685 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:41.686 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
-2026-05-12 13:57:41.686 [INFO ] [steps.PutDeleteStepDefinitions] - Sending PUT request to: /posts/1
-2026-05-12 13:57:42.237 [INFO ] [steps.PutDeleteStepDefinitions] - PUT response: HTTP 200
-2026-05-12 13:57:42.237 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
-2026-05-12 13:57:42.238 [INFO ] [steps.Hooks] - SCENARIO PASSED: PUT response body is not empty
-2026-05-12 13:57:42.240 [INFO ] [steps.Hooks] - ========================================
-2026-05-12 13:57:42.240 [INFO ] [steps.Hooks] -   Test Execution Complete
-2026-05-12 13:57:42.240 [INFO ] [steps.Hooks] -   Check target/cucumber-reports for results
-2026-05-12 13:57:42.240 [INFO ] [steps.Hooks] - ========================================
+2026-05-14 12:38:45.231 [INFO ] [utils.ValidationHelper] - Asserting field exists: userId = 1
+2026-05-14 12:38:45.232 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate required fields in payment record
+2026-05-14 12:38:45.239 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:45.240 [INFO ] [steps.Hooks] - SCENARIO STARTED: Get payments filtered by user ID
+2026-05-14 12:38:45.240 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:38:45.240 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:45.241 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:45.241 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:45.243 [INFO ] [steps.GetPaymentStepDefinitions] - GET /posts with ?userId=1
+2026-05-14 12:38:45.561 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
+2026-05-14 12:38:45.564 [INFO ] [steps.GetPaymentStepDefinitions] - Response list contains 10 items
+2026-05-14 12:38:45.565 [INFO ] [steps.Hooks] - SCENARIO PASSED: Get payments filtered by user ID
+2026-05-14 12:38:45.571 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:45.572 [INFO ] [steps.Hooks] - SCENARIO STARTED: Get sub-resource for payment (comments/status updates)
+2026-05-14 12:38:45.573 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:38:45.573 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:45.573 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:45.574 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:45.574 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts/1/comments
+2026-05-14 12:38:46.604 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 1020ms
+2026-05-14 12:38:46.605 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
+2026-05-14 12:38:46.608 [INFO ] [steps.GetPaymentStepDefinitions] - Response list contains 5 items
+2026-05-14 12:38:46.609 [INFO ] [steps.Hooks] - SCENARIO PASSED: Get sub-resource for payment (comments/status updates)
+2026-05-14 12:38:46.617 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:46.617 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate payment ID matches requested ID
+2026-05-14 12:38:46.618 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:38:46.618 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:46.619 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:46.620 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:46.620 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts/5
+2026-05-14 12:38:48.897 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 2261ms
+2026-05-14 12:38:48.898 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
+2026-05-14 12:38:48.925 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate payment ID matches requested ID
+2026-05-14 12:38:48.934 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:48.934 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate response body is not empty
+2026-05-14 12:38:48.935 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:38:48.935 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:48.935 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:48.936 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:48.937 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts/1
+2026-05-14 12:38:49.316 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 364ms
+2026-05-14 12:38:49.317 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
+2026-05-14 12:38:49.319 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate response body is not empty
+2026-05-14 12:38:49.325 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:49.325 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate response meets strict SLA
+2026-05-14 12:38:49.325 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:38:49.325 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:49.326 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:49.327 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:49.327 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts/1
+2026-05-14 12:38:49.682 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 346ms
+2026-05-14 12:38:49.683 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
+2026-05-14 12:38:49.684 [INFO ] [utils.ValidationHelper] - Response time: 346ms (max allowed: 3000ms)
+2026-05-14 12:38:49.684 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate response meets strict SLA
+2026-05-14 12:38:49.693 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:49.693 [INFO ] [steps.Hooks] - SCENARIO STARTED: Get posts and users resources
+2026-05-14 12:38:49.693 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:38:49.693 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:49.694 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:49.694 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:49.695 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts
+2026-05-14 12:38:50.078 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 361ms
+2026-05-14 12:38:50.087 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
+2026-05-14 12:38:50.090 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /users
+2026-05-14 12:38:50.402 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 302ms
+2026-05-14 12:38:50.403 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
+2026-05-14 12:38:50.403 [INFO ] [steps.Hooks] - SCENARIO PASSED: Get posts and users resources
+2026-05-14 12:38:50.410 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:50.410 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate each item in list has required payment fields
+2026-05-14 12:38:50.410 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:38:50.410 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:50.411 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:50.412 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:50.413 [INFO ] [steps.GetPaymentStepDefinitions] - Sending GET request to: /posts
+2026-05-14 12:38:50.741 [INFO ] [steps.GetPaymentStepDefinitions] - Response received: HTTP 200, Time: 313ms
+2026-05-14 12:38:50.742 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
+2026-05-14 12:38:52.965 [INFO ] [steps.GetPaymentStepDefinitions] - All 100 items have field 'id'
+2026-05-14 12:38:54.849 [INFO ] [steps.GetPaymentStepDefinitions] - All 100 items have field 'title'
+2026-05-14 12:38:56.510 [INFO ] [steps.GetPaymentStepDefinitions] - All 100 items have field 'userId'
+2026-05-14 12:38:56.511 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate each item in list has required payment fields
+2026-05-14 12:38:56.530 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:56.531 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate German IBAN format in payment
+2026-05-14 12:38:56.531 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:38:56.532 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:38:56.532 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:56.533 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:38:56.539 [INFO ] [steps.PostPaymentStepDefinitions] - Initiating cross-border payment: 500.00 EUR from DE89370400440532013000 to FR7614508059144900028066622
+2026-05-14 12:38:56.544 [DEBUG] [models.PaymentRequestBuilder] - Built pacs.008 Credit Transfer payload: amount=500.00 EUR
+2026-05-14 12:39:00.259 [INFO ] [steps.PostPaymentStepDefinitions] - Payment creation validated: HTTP 201
+2026-05-14 12:39:00.261 [INFO ] [utils.ValidationHelper] - IBAN validation passed: DE89370400440532013000
+2026-05-14 12:39:00.261 [INFO ] [utils.ValidationHelper] - IBAN validation passed: FR7614508059144900028066622
+2026-05-14 12:39:00.262 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate German IBAN format in payment
+2026-05-14 12:39:00.267 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:00.267 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate payment amount is correct format
+2026-05-14 12:39:00.267 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:39:00.269 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:00.269 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:00.270 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:00.271 [INFO ] [steps.PostPaymentStepDefinitions] - Initiating cross-border payment: 250.50 USD from US12345678901234567890 to GB29NWBK60161331926819
+2026-05-14 12:39:00.271 [DEBUG] [models.PaymentRequestBuilder] - Built pacs.008 Credit Transfer payload: amount=250.50 USD
+2026-05-14 12:39:00.936 [INFO ] [steps.PostPaymentStepDefinitions] - Payment creation validated: HTTP 201
+2026-05-14 12:39:00.937 [INFO ] [utils.ValidationHelper] - Amount validation passed: 250.50
+2026-05-14 12:39:00.939 [INFO ] [utils.ValidationHelper] - Currency code validation passed: USD
+2026-05-14 12:39:00.939 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate payment amount is correct format
+2026-05-14 12:39:00.945 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:00.945 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate EUR cross-border payment
+2026-05-14 12:39:00.946 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:39:00.946 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:00.946 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:00.947 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:00.948 [INFO ] [steps.PostPaymentStepDefinitions] - Initiating cross-border payment: 1000.00 EUR from DE89370400440532013000 to NL91ABNA0417164300
+2026-05-14 12:39:00.949 [DEBUG] [models.PaymentRequestBuilder] - Built pacs.008 Credit Transfer payload: amount=1000.00 EUR
+2026-05-14 12:39:13.004 [INFO ] [steps.PostPaymentStepDefinitions] - Payment creation validated: HTTP 201
+2026-05-14 12:39:13.004 [INFO ] [utils.ValidationHelper] - Currency code validation passed: EUR
+2026-05-14 12:39:13.006 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate EUR cross-border payment
+2026-05-14 12:39:13.010 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:13.010 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate GBP payment to UK account
+2026-05-14 12:39:13.010 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:39:13.012 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:13.012 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:13.012 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:13.012 [INFO ] [steps.PostPaymentStepDefinitions] - Initiating cross-border payment: 750.00 GBP from GB29NWBK60161331926819 to GB82WEST12345698765432
+2026-05-14 12:39:13.012 [DEBUG] [models.PaymentRequestBuilder] - Built pacs.008 Credit Transfer payload: amount=750.00 GBP
+2026-05-14 12:39:13.605 [INFO ] [steps.PostPaymentStepDefinitions] - Payment creation validated: HTTP 201
+2026-05-14 12:39:13.607 [INFO ] [utils.ValidationHelper] - Currency code validation passed: GBP
+2026-05-14 12:39:13.607 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate GBP payment to UK account
+2026-05-14 12:39:13.611 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:13.611 [INFO ] [steps.Hooks] - SCENARIO STARTED: Payment response does not expose sensitive banking data
+2026-05-14 12:39:13.611 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:39:13.611 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:13.613 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:13.613 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:13.613 [INFO ] [steps.PostPaymentStepDefinitions] - Initiating cross-border payment: 100.00 EUR from DE89370400440532013000 to GB29NWBK60161331926819
+2026-05-14 12:39:13.613 [DEBUG] [models.PaymentRequestBuilder] - Built pacs.008 Credit Transfer payload: amount=100.00 EUR
+2026-05-14 12:39:14.111 [INFO ] [steps.PostPaymentStepDefinitions] - Payment creation validated: HTTP 201
+2026-05-14 12:39:14.113 [INFO ] [utils.ValidationHelper] - Sensitive data exposure check passed
+2026-05-14 12:39:14.113 [INFO ] [steps.Hooks] - SCENARIO PASSED: Payment response does not expose sensitive banking data
+2026-05-14 12:39:14.118 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:14.118 [INFO ] [steps.Hooks] - SCENARIO STARTED: High value payment submission
+2026-05-14 12:39:14.118 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:39:14.118 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:14.120 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:14.120 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:14.122 [INFO ] [steps.PostPaymentStepDefinitions] - Initiating cross-border payment: 50000.00 EUR from DE89370400440532013000 to GB29NWBK60161331926819
+2026-05-14 12:39:14.125 [DEBUG] [models.PaymentRequestBuilder] - Built pacs.008 Credit Transfer payload: amount=50000.00 EUR
+2026-05-14 12:39:14.697 [INFO ] [steps.PostPaymentStepDefinitions] - Payment creation validated: HTTP 201
+2026-05-14 12:39:14.698 [INFO ] [utils.ValidationHelper] - Response time: 564ms (max allowed: 5000ms)
+2026-05-14 12:39:14.698 [INFO ] [steps.Hooks] - SCENARIO PASSED: High value payment submission
+2026-05-14 12:39:14.707 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:14.707 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate multiple currency codes
+2026-05-14 12:39:14.707 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:39:14.707 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:14.708 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:14.708 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:14.709 [INFO ] [steps.PostPaymentStepDefinitions] - Initiating cross-border payment: 100.00 EUR from DE89370400440532013000 to GB29NWBK60161331926819
+2026-05-14 12:39:14.709 [DEBUG] [models.PaymentRequestBuilder] - Built pacs.008 Credit Transfer payload: amount=100.00 EUR
+2026-05-14 12:39:15.250 [INFO ] [steps.PostPaymentStepDefinitions] - Payment creation validated: HTTP 201
+2026-05-14 12:39:15.250 [INFO ] [utils.ValidationHelper] - Currency code validation passed: EUR
+2026-05-14 12:39:15.251 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate multiple currency codes
+2026-05-14 12:39:15.255 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:15.256 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate multiple currency codes
+2026-05-14 12:39:15.256 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:39:15.256 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:15.256 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:15.256 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:15.257 [INFO ] [steps.PostPaymentStepDefinitions] - Initiating cross-border payment: 100.00 USD from DE89370400440532013000 to GB29NWBK60161331926819
+2026-05-14 12:39:15.258 [DEBUG] [models.PaymentRequestBuilder] - Built pacs.008 Credit Transfer payload: amount=100.00 USD
+2026-05-14 12:39:15.874 [INFO ] [steps.PostPaymentStepDefinitions] - Payment creation validated: HTTP 201
+2026-05-14 12:39:15.874 [INFO ] [utils.ValidationHelper] - Currency code validation passed: USD
+2026-05-14 12:39:15.875 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate multiple currency codes
+2026-05-14 12:39:15.880 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:15.880 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate multiple currency codes
+2026-05-14 12:39:15.881 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:39:15.881 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:15.881 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:15.881 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:15.883 [INFO ] [steps.PostPaymentStepDefinitions] - Initiating cross-border payment: 100.00 GBP from DE89370400440532013000 to GB29NWBK60161331926819
+2026-05-14 12:39:15.883 [DEBUG] [models.PaymentRequestBuilder] - Built pacs.008 Credit Transfer payload: amount=100.00 GBP
+2026-05-14 12:39:16.847 [INFO ] [steps.PostPaymentStepDefinitions] - Payment creation validated: HTTP 201
+2026-05-14 12:39:16.848 [INFO ] [utils.ValidationHelper] - Currency code validation passed: GBP
+2026-05-14 12:39:16.848 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate multiple currency codes
+2026-05-14 12:39:16.853 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:16.854 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate multiple currency codes
+2026-05-14 12:39:16.854 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:39:16.854 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:16.855 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:16.855 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:16.856 [INFO ] [steps.PostPaymentStepDefinitions] - Initiating cross-border payment: 100.00 CHF from DE89370400440532013000 to GB29NWBK60161331926819
+2026-05-14 12:39:16.856 [DEBUG] [models.PaymentRequestBuilder] - Built pacs.008 Credit Transfer payload: amount=100.00 CHF
+2026-05-14 12:39:17.367 [INFO ] [steps.PostPaymentStepDefinitions] - Payment creation validated: HTTP 201
+2026-05-14 12:39:17.367 [INFO ] [utils.ValidationHelper] - Currency code validation passed: CHF
+2026-05-14 12:39:17.368 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate multiple currency codes
+2026-05-14 12:39:17.373 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:17.373 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate multiple currency codes
+2026-05-14 12:39:17.374 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:39:17.374 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:17.374 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:17.375 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:17.376 [INFO ] [steps.PostPaymentStepDefinitions] - Initiating cross-border payment: 100.00 JPY from DE89370400440532013000 to GB29NWBK60161331926819
+2026-05-14 12:39:17.376 [DEBUG] [models.PaymentRequestBuilder] - Built pacs.008 Credit Transfer payload: amount=100.00 JPY
+2026-05-14 12:39:17.865 [INFO ] [steps.PostPaymentStepDefinitions] - Payment creation validated: HTTP 201
+2026-05-14 12:39:17.866 [INFO ] [utils.ValidationHelper] - Currency code validation passed: JPY
+2026-05-14 12:39:17.867 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate multiple currency codes
+2026-05-14 12:39:17.888 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:17.888 [INFO ] [steps.Hooks] - SCENARIO STARTED: Create new post successfully
+2026-05-14 12:39:17.888 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:39:17.889 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:17.889 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:17.890 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:17.891 [INFO ] [steps.PostPaymentStepDefinitions] - Sending POST to: /posts
+2026-05-14 12:39:20.484 [INFO ] [steps.PostPaymentStepDefinitions] - POST response: HTTP 201
+2026-05-14 12:39:20.486 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=201, actual=201
+2026-05-14 12:39:20.505 [INFO ] [utils.ValidationHelper] - Asserting field exists: id = 101
+2026-05-14 12:39:20.519 [INFO ] [steps.PostPaymentStepDefinitions] - Payment ID received: 101
+2026-05-14 12:39:20.521 [INFO ] [steps.Hooks] - SCENARIO PASSED: Create new post successfully
+2026-05-14 12:39:20.528 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:20.528 [INFO ] [steps.Hooks] - SCENARIO STARTED: Initiate cross-border credit transfer EUR to GBP
+2026-05-14 12:39:20.528 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:39:20.528 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:20.529 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:20.529 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:20.530 [INFO ] [steps.PostPaymentStepDefinitions] - Initiating cross-border payment: 1500.00 EUR from DE89370400440532013000 to GB29NWBK60161331926819
+2026-05-14 12:39:20.531 [DEBUG] [models.PaymentRequestBuilder] - Built pacs.008 Credit Transfer payload: amount=1500.00 EUR
+2026-05-14 12:39:21.999 [INFO ] [steps.PostPaymentStepDefinitions] - Payment creation validated: HTTP 201
+2026-05-14 12:39:22.013 [INFO ] [utils.ValidationHelper] - Asserting field exists: id = 101
+2026-05-14 12:39:22.028 [INFO ] [steps.PostPaymentStepDefinitions] - Payment ID received: 101
+2026-05-14 12:39:22.029 [INFO ] [utils.ValidationHelper] - IBAN validation passed: DE89370400440532013000
+2026-05-14 12:39:22.029 [INFO ] [utils.ValidationHelper] - IBAN validation passed: GB29NWBK60161331926819
+2026-05-14 12:39:22.029 [INFO ] [utils.ValidationHelper] - Amount validation passed: 1500.00
+2026-05-14 12:39:22.030 [INFO ] [utils.ValidationHelper] - Currency code validation passed: EUR
+2026-05-14 12:39:22.031 [INFO ] [steps.Hooks] - SCENARIO PASSED: Initiate cross-border credit transfer EUR to GBP
+2026-05-14 12:39:22.038 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:22.038 [INFO ] [steps.Hooks] - SCENARIO STARTED: Payment initiation meets response time SLA
+2026-05-14 12:39:22.038 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:39:22.038 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:22.039 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:22.039 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:22.040 [INFO ] [steps.PostPaymentStepDefinitions] - Sending POST to: /posts
+2026-05-14 12:39:23.527 [INFO ] [steps.PostPaymentStepDefinitions] - POST response: HTTP 201
+2026-05-14 12:39:23.527 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=201, actual=201
+2026-05-14 12:39:23.529 [INFO ] [utils.ValidationHelper] - Response time: 1475ms (max allowed: 5000ms)
+2026-05-14 12:39:23.529 [INFO ] [steps.Hooks] - SCENARIO PASSED: Payment initiation meets response time SLA
+2026-05-14 12:39:23.534 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:23.534 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate POST response Content-Type
+2026-05-14 12:39:23.535 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:39:23.535 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:23.535 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:23.536 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:23.536 [INFO ] [steps.PostPaymentStepDefinitions] - Sending POST to: /posts
+2026-05-14 12:39:23.993 [INFO ] [steps.PostPaymentStepDefinitions] - POST response: HTTP 201
+2026-05-14 12:39:23.994 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=201, actual=201
+2026-05-14 12:39:23.996 [INFO ] [utils.ValidationHelper] - Asserting Content-Type: application/json; charset=utf-8
+2026-05-14 12:39:23.996 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate POST response Content-Type
+2026-05-14 12:39:24.002 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:24.002 [INFO ] [steps.Hooks] - SCENARIO STARTED: Created payment record has required fields
+2026-05-14 12:39:24.003 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:39:24.003 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:24.003 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:24.003 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:24.004 [INFO ] [steps.PostPaymentStepDefinitions] - Sending POST to: /posts
+2026-05-14 12:39:24.514 [INFO ] [steps.PostPaymentStepDefinitions] - POST response: HTTP 201
+2026-05-14 12:39:24.516 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=201, actual=201
+2026-05-14 12:39:24.534 [INFO ] [utils.ValidationHelper] - Asserting field exists: id = 101
+2026-05-14 12:39:24.550 [INFO ] [utils.ValidationHelper] - Asserting field exists: title = Payment EUR 1000.00
+2026-05-14 12:39:24.550 [INFO ] [steps.Hooks] - SCENARIO PASSED: Created payment record has required fields
+2026-05-14 12:39:24.556 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:24.556 [INFO ] [steps.Hooks] - SCENARIO STARTED: Payment missing required amount field
+2026-05-14 12:39:24.556 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:39:24.556 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:24.558 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:24.558 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:24.558 [INFO ] [steps.PostPaymentStepDefinitions] - Testing missing amount validation...
+2026-05-14 12:39:25.084 [INFO ] [utils.ValidationHelper] - Asserting success status (2xx): actual=201
+2026-05-14 12:39:25.086 [INFO ] [steps.Hooks] - SCENARIO PASSED: Payment missing required amount field
+2026-05-14 12:39:25.094 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:25.100 [INFO ] [steps.Hooks] - SCENARIO STARTED: Payment with negative amount should be rejected
+2026-05-14 12:39:25.101 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:39:25.101 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:25.101 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:25.101 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:25.105 [INFO ] [steps.PostPaymentStepDefinitions] - Testing negative amount validation: -100.00
+2026-05-14 12:39:25.591 [INFO ] [utils.ValidationHelper] - Asserting success status (2xx): actual=201
+2026-05-14 12:39:25.591 [INFO ] [steps.Hooks] - SCENARIO PASSED: Payment with negative amount should be rejected
+2026-05-14 12:39:25.597 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:25.597 [INFO ] [steps.Hooks] - SCENARIO STARTED: POST response body is not empty
+2026-05-14 12:39:25.597 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:39:25.597 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:25.597 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:25.597 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:25.599 [INFO ] [steps.PostPaymentStepDefinitions] - Sending POST to: /posts
+2026-05-14 12:39:26.518 [INFO ] [steps.PostPaymentStepDefinitions] - POST response: HTTP 201
+2026-05-14 12:39:26.518 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=201, actual=201
+2026-05-14 12:39:26.520 [INFO ] [steps.Hooks] - SCENARIO PASSED: POST response body is not empty
+2026-05-14 12:39:26.528 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:26.528 [INFO ] [steps.Hooks] - SCENARIO STARTED: Payment response does not expose sensitive data
+2026-05-14 12:39:26.528 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:39:26.528 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:26.528 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:26.529 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:26.529 [INFO ] [steps.PostPaymentStepDefinitions] - Sending POST to: /posts
+2026-05-14 12:39:27.110 [INFO ] [steps.PostPaymentStepDefinitions] - POST response: HTTP 201
+2026-05-14 12:39:27.110 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=201, actual=201
+2026-05-14 12:39:27.110 [INFO ] [utils.ValidationHelper] - Sensitive data exposure check passed
+2026-05-14 12:39:27.112 [INFO ] [steps.Hooks] - SCENARIO PASSED: Payment response does not expose sensitive data
+2026-05-14 12:39:27.124 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:27.124 [INFO ] [steps.Hooks] - SCENARIO STARTED: Update entire payment record
+2026-05-14 12:39:27.124 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:39:27.124 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:27.124 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:27.124 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:27.126 [INFO ] [steps.PutDeleteStepDefinitions] - Sending PUT request to: /posts/1
+2026-05-14 12:39:27.661 [INFO ] [steps.PutDeleteStepDefinitions] - PUT response: HTTP 200
+2026-05-14 12:39:27.661 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
+2026-05-14 12:39:27.663 [INFO ] [steps.PutDeleteStepDefinitions] - Payment update validated: HTTP 200
+2026-05-14 12:39:27.663 [INFO ] [steps.Hooks] - SCENARIO PASSED: Update entire payment record
+2026-05-14 12:39:27.667 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:27.667 [INFO ] [steps.Hooks] - SCENARIO STARTED: Validate PUT response headers
+2026-05-14 12:39:27.667 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:39:27.667 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:27.669 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:27.669 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:27.669 [INFO ] [steps.PutDeleteStepDefinitions] - Sending PUT request to: /posts/1
+2026-05-14 12:39:29.255 [INFO ] [steps.PutDeleteStepDefinitions] - PUT response: HTTP 200
+2026-05-14 12:39:29.255 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
+2026-05-14 12:39:29.255 [INFO ] [utils.ValidationHelper] - Asserting Content-Type: application/json; charset=utf-8
+2026-05-14 12:39:29.255 [INFO ] [steps.Hooks] - SCENARIO PASSED: Validate PUT response headers
+2026-05-14 12:39:29.255 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:29.255 [INFO ] [steps.Hooks] - SCENARIO STARTED: Partial update of payment reference
+2026-05-14 12:39:29.255 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:39:29.255 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:29.255 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:29.255 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:29.270 [INFO ] [steps.PutDeleteStepDefinitions] - Sending PATCH to: /posts/1 with title=Corrected Payment Reference
+2026-05-14 12:39:29.760 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
+2026-05-14 12:39:29.792 [INFO ] [steps.Hooks] - SCENARIO PASSED: Partial update of payment reference
+2026-05-14 12:39:29.798 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:29.798 [INFO ] [steps.Hooks] - SCENARIO STARTED: Update payment amount
+2026-05-14 12:39:29.798 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:39:29.798 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:29.798 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:29.798 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:29.800 [INFO ] [steps.PutDeleteStepDefinitions] - Updating payment 1 with new amount 2500.00 USD
+2026-05-14 12:39:31.289 [INFO ] [steps.PutDeleteStepDefinitions] - Payment update validated: HTTP 200
+2026-05-14 12:39:31.291 [INFO ] [utils.ValidationHelper] - Response time: 1483ms (max allowed: 5000ms)
+2026-05-14 12:39:31.291 [INFO ] [steps.Hooks] - SCENARIO PASSED: Update payment amount
+2026-05-14 12:39:31.295 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:31.295 [INFO ] [steps.Hooks] - SCENARIO STARTED: PUT response body is not empty
+2026-05-14 12:39:31.295 [INFO ] [steps.Hooks] - Tags: []
+2026-05-14 12:39:31.295 [INFO ] [steps.Hooks] - ─────────────────────────────────────────
+2026-05-14 12:39:31.295 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:31.297 [INFO ] [steps.CommonStepDefinitions] - Base URL configured: https://jsonplaceholder.typicode.com
+2026-05-14 12:39:31.297 [INFO ] [steps.PutDeleteStepDefinitions] - Sending PUT request to: /posts/1
+2026-05-14 12:39:33.224 [INFO ] [steps.PutDeleteStepDefinitions] - PUT response: HTTP 200
+2026-05-14 12:39:33.224 [INFO ] [utils.ValidationHelper] - Asserting status code: expected=200, actual=200
+2026-05-14 12:39:33.226 [INFO ] [steps.Hooks] - SCENARIO PASSED: PUT response body is not empty
+2026-05-14 12:39:33.228 [INFO ] [steps.Hooks] - ========================================
+2026-05-14 12:39:33.228 [INFO ] [steps.Hooks] -   Test Execution Complete
+2026-05-14 12:39:33.228 [INFO ] [steps.Hooks] -   Check target/cucumber-reports for results
+2026-05-14 12:39:33.228 [INFO ] [steps.Hooks] - ========================================

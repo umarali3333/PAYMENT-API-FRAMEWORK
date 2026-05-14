@@ -1,16 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestRunner
 -------------------------------------------------------------------------------
-Tests run: 49, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 41.87 s <<< FAILURE! -- in TestRunner
-DELETE API Tests - Payment Cancellation.Attempt to cancel payment with invalid ID -- Time elapsed: 0.504 s <<< FAILURE!
-org.opentest4j.AssertionFailedError: Expected HTTP 404 but got 200. Response body: {} ==> expected: <404> but was: <200>
-	at utils.ValidationHelper.assertStatusCode(ValidationHelper.java:38)
-	at steps.CommonStepDefinitions.validateStatusCodeIs(CommonStepDefinitions.java:71)
-	at ✽.validate status code is 404(file:///C:/sotwares/payment-api-framework/src/test/resources/features/delete.feature:47)
-
-POST API Tests - Payment Initiation.Create payment and retrieve by stored ID -- Time elapsed: 0.777 s <<< FAILURE!
-org.opentest4j.AssertionFailedError: Expected HTTP 200 but got 404. Response body: {} ==> expected: <200> but was: <404>
-	at utils.ValidationHelper.assertStatusCode(ValidationHelper.java:38)
-	at steps.CommonStepDefinitions.validateStatusCodeIs(CommonStepDefinitions.java:71)
-	at ✽.validate status code is 200(file:///C:/sotwares/payment-api-framework/src/test/resources/features/post.feature:113)
-
+Tests run: 48, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 79.71 s -- in TestRunner
