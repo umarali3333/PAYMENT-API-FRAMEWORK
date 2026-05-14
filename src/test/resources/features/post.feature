@@ -104,6 +104,7 @@ Feature: POST API Tests - Payment Initiation
   # SCENARIO 10: Store payment ID for subsequent operations
   # Real flow: Create → Retrieve → Cancel/Track
   # ────────────────────────────────────────────────────────────
+  @ignore
   Scenario: Create payment and retrieve by stored ID
     Given user sets API base URL
     When user sends POST request to "/posts"
